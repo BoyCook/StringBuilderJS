@@ -4,7 +4,7 @@ REPORTER = dot
 
 spec: test-spec
 
-test: test-spec
+test: test-timings
 
 test-timings:
 	node test/timings.js
