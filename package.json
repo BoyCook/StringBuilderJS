@@ -1,0 +1,32 @@
+{
+    "name": "string-builder",
+    "version": "0.0.1-SNAPSHOT",
+    "author": "BoyCook",
+    "description": "String Builder implementation in JavaScript for node.js",
+    "contributors": [
+        {
+            "name": "Craig Cook",
+            "id": "BoyCook"
+        }
+    ],
+    "scripts": {
+        "test": "make test",
+        "predeploy": "echo This will be run before deploying the app",
+        "postdeploy": "echo This will be run after deploying the app"
+    },
+    "main": "./lib/stringbuilder",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BoyCook/StringBuilderJS.git"
+    },
+    "keywords": [
+        "String",
+        "Builder",
+        "StringBuilder",
+        "String Builder"
+    ],
+    "engines": {
+        "node": ">=0.6"
+    }
+}
+
