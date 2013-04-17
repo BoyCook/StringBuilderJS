@@ -25,7 +25,7 @@ See the timings.js for an idea. String concatenation performs better over Array 
 You can include the module from GitHub directly by adding the following to your `package.json` and then doing `npm install`
 
     "dependencies": {
-        "object-utils": "https://github.com/BoyCook/ObjectUtilsJS/tarball/master"
+        "string-builder": "https://github.com/BoyCook/StringBuilderJS/tarball/master"
     }
 
 
