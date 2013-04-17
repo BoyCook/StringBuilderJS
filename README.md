@@ -1,3 +1,5 @@
+[![Build Status](http://craigcook.co.uk/build/job/String%20Builder%20JS/badge/icon)](http://craigcook.co.uk/build/job/String%20Builder%20JS/)
+
 ## Description
 A String Builder implementation in JavaScript for node.js
 
@@ -28,4 +30,8 @@ You can include the module from GitHub directly by adding the following to your 
         "string-builder": "https://github.com/BoyCook/StringBuilderJS/tarball/master"
     }
 
+## Links
+
+* http://craigcook.co.uk/build/job/String%20Builder%20JS
+* http://craigcook.co.uk/quality/dashboard/index/254
 
