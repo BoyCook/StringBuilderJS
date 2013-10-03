@@ -1,33 +1,35 @@
 
-TESTS = test/*.js
-REPORTER = dot
+TESTS = test/*Spec.js
+REPORTER = spec
+COVERAGE_REPORT = ./coverage/lcov.info
+COVERALLS = ./node_modules/coveralls/bin/coveralls.js
 
-spec: test-spec
-
-test: test-timings
-
-test-timings:
-	node test/timings.js
-
-test-spec:
-	jasmine-node test/spec --junitreport --forceexit
-
-ui-test:
-	casperjs test test/ui
+test: test-mocha
 
 test-mocha:
 	@NODE_ENV=test mocha \
-	    --require should \
 	    --timeout 200 \
 		--reporter $(REPORTER) \
 		$(TESTS)
 
-test-cov: lib-cov
-	@RPSLP_COV=1 $(MAKE) test
+test-cov: istanbul
 
-lib-cov:
-	jscoverage lib lib-cov
+istanbul:
+	istanbul cover _mocha -- -R spec $(TESTS)
+
+coveralls:
+	cat $(COVERAGE_REPORT) | $(COVERALLS)
+
+cov-html: test-cov html-cov-report
+
+html-cov-report: 
+	istanbul report html	
+
+npm:
+	npm publish ./
+
+check:
+	travis-lint .travis.yml
 
 clean:
-	rm -f reports/*
-	rm -fr lib-cov
+	rm -rf ./coverage
